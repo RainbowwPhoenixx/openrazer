@@ -418,6 +418,10 @@ static ssize_t razer_attr_read_device_type(struct device *dev, struct device_att
         device_type = "Razer Basilisk X HyperSpeed\n";
         break;
 
+    case USB_DEVICE_ID_RAZER_BASILISK_ESSENTIAL:
+        device_type = "Razer Basilisk Essential\n";
+        break;
+
     default:
         device_type = "Unknown Device\n";
     }
@@ -4460,6 +4464,7 @@ static const struct hid_device_id razer_devices[] = {
     { HID_USB_DEVICE(USB_VENDOR_ID_RAZER,USB_DEVICE_ID_RAZER_DEATHADDER_2000) },
     { HID_USB_DEVICE(USB_VENDOR_ID_RAZER,USB_DEVICE_ID_RAZER_ATHERIS_RECEIVER) },
     { HID_USB_DEVICE(USB_VENDOR_ID_RAZER,USB_DEVICE_ID_RAZER_BASILISK_X_HYPERSPEED) },
+    { HID_USB_DEVICE(USB_VENDOR_ID_RAZER,USB_DEVICE_ID_RAZER_BASILISK_ESSENTIAL) },
     { 0 }
 };
 
